@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Code{{super()}}{% endblock %}
+
+{% block content %}
+<div class="container pt">
+    <div class="row">
+        <a href="/manage/" class="btn btn-default">Manage Top</a><a href="/manage/site/new/" class="btn btn-default">New Site</a>
+    </div>
+    <div class="row mt">
+        <div class="col-lg-6 col-lg-offset-3 centered">
+            <h3>{{site.title}}</h3>
+            <hr>
+            <p>埋め込みコードの取得</p>
+            <p>このコードをサイトに埋め込むとPeChatがサイトに埋め込まれます。</p>
+        </div>
+    </div>
+    <div class="row mt">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="form-group">
+                <textarea id="code" name="code" rows="5" class="form-control">
+                    &lt;link rel="stylesheet" href="{{BASE_URL}}css/pechat.css"&gt;
+                    &lt;script src="{{BASE_URL}}js/pechat.js" charset="utf-8"&gt;&lt;/script&gt;
+                    &lt;script type="text/javascript"&gt;PeChat("{{site.site_id}}");&lt;/script&gt;
+                </textarea>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

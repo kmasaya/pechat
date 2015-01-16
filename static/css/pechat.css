@@ -1,0 +1,64 @@
+div#PeChat {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 5px;
+    background-image: url("http://pechat.w32.jp/static/image/icon.png") center center;
+}
+div#PeChat *{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+div#PeChat div#PeChatStatus{
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+div#PeChat div#PeChatWindow {
+    display: none;
+    position: absolute;
+    width: 280px;
+    height: 320px;
+    bottom: 35px;
+    background: url("http://pechat.w32.jp/static/image/PeChatBack.png") center center;
+    border-radius: 5px;
+    padding: 10px;
+}
+div#PeChat div#PeChatWindow #PeChatLogTextArea{
+    position: absolute;
+    padding: 12px 10px;
+    width: 280px;
+    height: 235px;
+    color: #FFF;
+    font-size: 12px;
+    line-height: 1.5em;
+    border: 0;
+    overflow: hidden;
+    resize: none;
+    background-color: inherit;
+}
+div#PeChatWindow div#PeChatControl{
+    margin-top: 280px;
+    height: 30px;
+    text-align: center;
+}
+div#PeChatWindow div#PeChatControl #PeChatMessageArea{
+    background-color: #000000;
+    border: 1px solid #FFFFFF;
+    border: none;
+    padding: 2px 3px;
+    color: #FFFFFF;
+    width: 200px;
+}
+div#PeChatWindow div#PeChatControl button{
+    background-color: #000000;
+    border: none;
+    color: #FFFFFF;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+div#PeChatWindow #PeChatMessageSend{
+    display: none;
+}

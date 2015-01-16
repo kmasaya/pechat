@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Manage{{super()}}{% endblock %}
+
+{% block content %}
+<div class="container pt">
+    <div class="row">
+        <a href="/manage/" class="btn btn-default">Manage Top</a><a href="/manage/site/new/" class="btn btn-default">New Site</a>
+    </div>
+    <div class="row mt">
+        <div class="col-lg-6 col-lg-offset-3 centered">
+            <h3>Sites</h3>
+            <hr>
+            <p>サイトの一覧を表示しています。</p>
+        </div>
+    </div>
+    <div class="row mt centered">
+        <table class="table table-striped">
+            <tr>
+                <th>Title</th>
+                <th>Body</th>
+                <th>Site ID</th>
+                <th>Control</th>
+            </tr>
+            {% for site in sites %}
+            <tr>
+                <th><a href="/manage/site/{{site.id}}/">{{site.title}}</a></th>
+                <td style="text-align: left;">{{site.body}}</td>
+                <td>{{site.site_id}}</td>
+                <td><a class="btn" href="/manage/site/code/{{site.id}}/">Code</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

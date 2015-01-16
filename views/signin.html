@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Signin{{super()}}{% endblock %}
+
+{% block content %}
+<div class="container pt">
+    <div class="row mt">
+        <div class="col-lg-6 col-lg-offset-3 centered">
+            <h3>Singin</h3>
+            <hr>
+            <p class="alert">{{message}}</p>
+        </div>
+    </div>
+    <div class="row mt">
+        <div class="col-lg-8 col-lg-offset-2">
+            <form role="form" action="" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" maxlength="16" required="required">
+                    <br>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" maxlength="16" required="required">
+                    <br>
+                </div>
+
+                <input type="submit" value="Signin" class="btn btn-lg btn-block btn-primary">
+            </form>
+        </div>
+    </div><!-- /row -->
+</div><!-- /container -->
+{% endblock %}
+
+
